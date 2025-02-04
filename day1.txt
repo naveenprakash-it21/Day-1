@@ -1,0 +1,44 @@
+DAY - 1 [04-02-2025]
+
+Topics - Javascript, Javascript engine, Version, Variables
+
+
+JavaScript ? 
+Help us to create interactive web pages.
+Make web pages alive.
+Scripts are plain text.
+No need for a special compilation to run.
+ 
+Browser:
+ It is originally made to run in browsers.
+         	 Every browser has a javascript engine to run javascript code.
+ Google ( v8 ) ,  Edge ( Chakra )  , Firefox ( SpiderMonkey ) , Safari ( JS Core Webkit) .
+Open source javascript in chrome and embedded in cpp and it is called node.
+Js code can run in node or browser.
+
+JavaScript:- Confirm the specification.
+
+ECMAScript:- Just a Specification. [ European computer manufacturers Association ]
+
+Mobile app - Facebook developed a framework called react native (Js).
+Desktop apps - Skype, VScode are built by html, css, Javascript.
+Game - Phaser.js and impact.js
+Server - Express js, node js, nest js 
+              Socket.io ( Library) to communicate with client and server.
+Machine Learning - Tensorflow js 
+
+
+
+
+
+Variables:-
+
+Var, Let, Const
+Var - var can be redefinable and declarable.
+Let - Let can be modified but cannot declare once again. [ Make a Scope ]. 
+Const - const is fixed.
+
+Var -  Var is a function variable, gives power to entire function
+Let  - Let is a block variable, gives power to a certain block of code.
+
+
