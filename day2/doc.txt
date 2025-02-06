@@ -1,0 +1,161 @@
+Day - 2
+ 05.02.2025
+
+Functions / method-
+	Function keyword is used to declare a function.
+
+const person={
+    name:"Naveen",
+    age:21,
+}; /// This is an object
+
+
+function getDetails(){
+    console.log(person.age); // object called with the attribute also
+    console.log(person.name);
+}
+
+
+getDetails(); /// calling the function
+
+Argument and Parameters;
+
+Passing a value is called - Argument
+Receiving a value is called - Parameter
+
+const person = {
+	Name: “name”,
+	Age : 24,
+};
+
+function printPerson(person) {    // giving the obj as parameter
+	console.log(name);
+	console.log(age);
+}
+
+printPerson(person.name,person.age);
+printPerson({name : “ Someone ”, age : 25});
+
+
+
+
+Name: Alice
+Age: 20
+Name: Alic
+Default parameter 
+const person2={
+    name:"Prakashi",
+    age:24,
+};
+
+
+function printP2(name=" Durga "){ // parameter
+    console.log(name);
+}
+
+
+printP2(person2.name);
+
+If we are not passing the argument to the function it will take the default value in the parameter
+
+If we pass the argument to the function it will prior the argument what we send
+
+
+Operator:-  
+
+console.log(‘1’ <  5 ); 1<5 —- It will check whether single quote contain any number
+console.log(true = = 1) —- we consider that true is 1 and false is 0.
+
+Strict equality operator
+console.log(1===1)
+console.log(‘1’===1)
+
+Lose equality operator
+console.log(1==1)
+console.log(‘1’==1)
+
+
+
+Invoke Function:- 
+
+It will call itself … no need of calling a function 
+
+( function sayHello() {
+	console.log(“Hello world”);
+} ) ();
+
+
+Function Expression:-
+Const greeting= function sayHello(){
+	console.log(“hello from greeting”)
+}
+
+Arrow function:- 
+An arrow function is a concise way to write a function in JavaScript or PHP. Arrow functions are useful for simple actions, especially one-line operations.
+
+First class function:-
+	Ability to use function as values - and can be passed as an argument into another function
+
+Alert - pop up
+Confirm - ok or cancel
+Prompt - Enter the value and check
+
+
+Closure: -
+
+A closure is a function that has access to its own scope, the outer function’s variables, and global variables, even after the outer function has finished executing. This enables functions to “remember” their environment.
+
+
+
+
+
+
+function points(argument){
+    console.log("Running");
+    const total =argument;
+
+
+    // Add, remove and getTotal
+    const addPoint = () => {
+        return total + 1;
+    }
+
+
+    const removePoint = (points) => {
+        return total - points;
+    }
+
+
+    const getTotalPoint = () => {
+        return total;
+    }
+    return {addPoint, removePoint, getTotalPoint}
+
+
+    }
+
+
+const table = points(100);
+console.log(table.addPoint());
+console.log(table.removePoint(10));
+ 
+
+
+
+Age: 20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
