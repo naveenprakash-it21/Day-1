@@ -76,3 +76,11 @@ buttons.forEach(button => {
         }
     });
 });
+
+function print(x){
+ 
+}
+
+const print1 = (x) => {
+
+}
