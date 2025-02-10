@@ -1,49 +1,50 @@
 // SetTimeOut 
 // setTimeout ( function , milliseconds, parameters1 , parameter2 ... )
 
-setTimeout(greeting,3000);
+// setTimeout(greeting,3000);
 
-function greeting(){
-    console.log("Hello2");
-}
-setTimeout(greeting1,3000, 'Hiii');
+// function greeting(){
+//     console.log("Hello2");
+// }
+// setTimeout(greeting1,3000, 'Hiii');
 
-function greeting1(x){
-    console.log(x);
-}
-/*----------------------------------*/
+// function greeting1(x){
+//     console.log(x);
+// }
+// /*----------------------------------*/
 
-setTimeout(()=>{
-    console.log('Naveen');
-},3000);
+// setTimeout(()=>{
+//     console.log('Naveen');
+// },3000);
 
-//------------------------------------------
-// setInterval ( function , milliseconds, parameters1 , parameter2 ... )
+// /*------------------------------------------*/
+// setInterval ( functions , milliseconds, parameters1 , parameter2 )
+
 // let count=0;
 // const countInterval= setInterval(count1,3000)
 // function count1(){
 //     if(count===4){
-//         clearInterval(countInterval);
+//         clearTimeout(countInterval);
 //     }
 //     console.log("Nammatha");
 //     count++;
 // };
 // //=====================================================================
 
-let p = new Promise((resolve, reject) => {
-    let n = 1+21;
-    if(n==3){
-        resolve("pass");
-    }else{
-        reject("failed");
-    }
-})
+// let p = new Promise((resolve, reject) => {
+//     let n = 1+21;
+//     if(n==3){
+//         resolve("pass");
+//     }else{
+//         reject("failed");
+//     }
+// })
 
-p.then((message)=>{
-    console.log('Then is in ' + message);
-}).catch((message)=>{
-    console.log("catch "+ message);
-})
+// p.then((message)=>{
+//     console.log('Then is in ' + message);
+// }).catch((message)=>{
+//     console.log("catch "+ message);
+// })
 
 //==============================================================
 // try{
@@ -99,8 +100,8 @@ function trash(){
     })
 }
 
-walkDog().then(value=>{console.log(value);
-return cleanKitchen()}) .then(value=>{console.log(value);
+walkDog().then(vaue=>{console.log(vaue);
+return cleanKitchen()}) .then(vaue=>{console.log(vaue);
 return trash()}).then(value=>{console.log(value)}).
 catch(error=>console.error());
 
