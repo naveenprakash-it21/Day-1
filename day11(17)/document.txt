@@ -1,0 +1,123 @@
+Day - 10
+17.02.2025
+
+API fetching
+Import HttpClientModule
+First, you need to import HttpClientModule in your Angular application. This is usually done in the app.module.ts file.
+import { HttpClientModule } from '@angular/common/http';
+
+
+@NgModule({
+  declarations: [
+    // your components
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule, // Add HttpClientModule here
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+Create a Service to Handle API Requests
+It's a best practice to create a service to handle all HTTP requests. You can generate a service using the Angular CLI:
+ng generate service api
+
+
+
+
+Use the Service in a Component
+Inject the ApiService into your component and call the methods to fetch data.
+
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from './api.service';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <h1>Posts</h1>
+    <ul>
+      <li *ngFor="let post of posts">{{ post.title }}</li>
+    </ul>
+  `
+})
+export class AppComponent implements OnInit {
+  posts: any[] = [];
+
+  constructor(private apiService: ApiService) { }
+
+  ngOnInit(): void {
+    this.apiService.getPosts().subscribe(
+      (data) => {
+        this.posts = data;
+      },
+      (error) => {
+        console.error('Error fetching posts:', error);
+      }
+    );
+  }
+}
+
+
+Handle Errors
+Always handle errors when making HTTP requests. You can use the error callback in the subscribe method or use RxJS operators like catchError.
+import { catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
+
+this.apiService.getPosts().pipe(
+  catchError((error) => {
+    console.error('Error:', error);
+    return of([]); // Return an empty array or default value
+  })
+).subscribe((data) => {
+  this.posts = data;
+});
+
+Testing API Calls
+You can test your API calls using tools like Postman or by writing unit tests in Angular.
+Example unit test for the service:
+
+
+
+
+
+
+
+
+Default Folder Structure
+my-angular-app/
+├── e2e/                                      	                      # End-to-end tests (using Protractor by default)
+├── node_modules/    			                       # Installed npm packages and dependencies
+├── src/            			                        # Application source code
+│   ├── app/        			                        # Main application code
+│   │   ├── components/  		                        # Reusable components
+│   │   ├── services/    	        		                         # Services for business logic and API calls
+│   │   ├── models/      			            # Data models (optional)
+│   │   ├── interfaces/   				# TypeScript interfaces (optional)
+│   │   ├── guards/       				# Route guards (optional)
+│   │   ├── pipes/        					# Custom pipes (optional)
+│   │   ├── directives/  				 # Custom directives (optional)
+│   │   ├── app.component.ts      			# Root component
+│   │   ├── app.component.html   			 # Root component template
+│   │   ├── app.component.css     			# Root component styles
+│   │   ├── app.module.ts         			# Root module
+│   │   └── app-routing.module.ts 			# Routing configuration
+│   ├── assets/        				  	 # Static assets (images, fonts, etc.)
+│   ├── environments/     				# Environment-specific configuration files
+│   │   ├── environment.ts      				# Development environment
+│   │   └── environment.prod.ts     			# Production environment
+│   ├── styles.css        					# Global styles
+│   ├── main.ts          					 # Application entry point
+│   ├── polyfills.ts     					 # Polyfills for browser compatibility
+│   ├── test.ts           					# Unit test entry point
+│   └── index.html        				# Main HTML file
+├── .editorconfig         					# Editor configuration
+├── .gitignore           					 # Git ignore file
+├── angular.json        					  # Angular CLI configuration
+├── package.json         					 # npm dependencies and scripts
+├── README.md             				# Project documentation
+├── tsconfig.json         					# TypeScript configuration
+└── tslint.json           					# TSLint configuration (for code linting)
+
+
