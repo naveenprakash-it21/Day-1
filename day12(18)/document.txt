@@ -1,0 +1,75 @@
+                                                   Day - 12
+ 18.02.2025
+
+Freezing columns
+What is "freezing" a column
+You can "freeze" a column so that it stays in place on the screen while you scroll horizontally. This is useful if you need to keep some information in view when you have a lot of columns, so that you can easily identify which row of information you are looking at.
+When you freeze a column, it affects the view configuration and you can save the view config to persist the frozen columns.
+
+
+ngOnInit() {
+    this.frozencols = [
+      { field: 'prodcode', header: 'Product Code', datatype: 'string', classname: 'string-type', isdefault: true },
+      { field: 'prodname', header: 'Product Name', datatype: 'string', classname: 'string-type', isdefault: true },
+    ]
+    this.getmisReport();
+    window.scrollTo(0, 0);
+  }
+
+
+
+
+
+
+
+Different Commands in Git
+So far, in the how Git works tutorial you read all about Git and GitHub. Next in the how Git works tutorial comes Git commands. 
+Git config
+Git init
+Git add
+Git diff
+Git commit
+Git reset
+Git status
+Git merge
+Git push
+Git pull
+
+
+
+
+
+
+class FreezeTableWidget : public QTableView {
+     Q_OBJECT
+
+
+public:
+      FreezeTableWidget(QAbstractItemModel * model);
+      ~FreezeTableWidget();
+
+
+protected:
+      void resizeEvent(QResizeEvent *event) override;
+      QModelIndex moveCursor(CursorAction cursorAction, Qt::KeyboardModifiers modifiers) override;
+      void scrollTo (const QModelIndex & index, ScrollHint hint = EnsureVisible) override;
+
+
+private:
+      QTableView *frozenTableView;
+      void init();
+      void updateFrozenTableGeometry();
+
+
+private slots:
+      void updateSectionWidth(int logicalIndex, int oldSize, int newSize);
+      void updateSectionHeight(int logicalIndex, int oldSize, int newSize);
+};
+
+Demo of Git Push Command
+Next in the how Git works tutorial, let’s start with opening Git Bash and configuring it with a user name and email ID. To configure, we use the following commands:
+To configure, we use the following commands:
+Git config --global user.name "Simplilearn GitHub"
+Git config --global user.email siddam.bharat@simplilearn.net
+Git config –list
+
