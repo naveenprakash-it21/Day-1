@@ -1,0 +1,32 @@
+Day - 13
+19.02.2025
+
+Data Fetching in the Column
+The table now supports dynamic data fetching, ensuring real-time updates from the backend or API. Each column is populated efficiently, maintaining performance even with large datasets. Caching and optimized rendering strategies have been implemented to enhance the user experience.
+
+
+
+
+
+
+Search, Sort, and Filter Feature
+Search: Users can quickly find relevant data by entering keywords in the search bar. The implementation ensures case-insensitive and partial matches for a smooth experience.
+Sort: Sorting functionality has been added, allowing users to arrange data in ascending or descending order based on column values. This applies to text, numeric, and date fields.
+Filter: Users can apply multiple filters to refine displayed data. Filters support various conditions such as range-based filtering (for dates and numbers), dropdown selections,and text-based queries.
+
+
+ 
+
+Downloading as PDF or Excel
+PDF Export: Users can export table data to a structured and formatted PDF document. The export maintains column alignment, headers, and essential styling for professional documentation.
+Excel Export: Data can be downloaded as an Excel file (.xlsx), enabling users to analyze and manipulate it further. The export supports structured formatting, including headers, number formatting, and conditional styling.
+
+
+
++Frozen Column
+To improve readability and ease of data navigation, specific table columns have been frozen (locked) in place. This ensures that important fields, such as IDs or Names, remain visible even when scrolling horizontally. The feature is particularly useful for large tables with many columns.
+The implementation allows configurable freezing, meaning users or developers can define which columns should remain fixed.
+It enhances usability, especially in responsive layouts, ensuring the UI remains intuitive on different screen sizes.
+Performance optimizations ensure that freezing does not impact scrolling smoothn
+
+
